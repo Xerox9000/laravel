@@ -36,10 +36,10 @@ return [
     ],
 
 
-    'facebook' => [
-    'client_id' => '154318678733947',
-    'client_secret' => '86494e7001f1bdeb171fd9cc1317a510',
-    'redirect' => 'http://homestead.test/login/facebook/callback',
+    'google' => [
+    'client_id' => '162460271859-magml52pfstfhjgbbe5k66hm4tgvui6q.apps.googleusercontent.com',
+    'client_secret' => 'ETI97Y_3e9sJixYfuCniRRcG',
+    'redirect' => 'http://hilala.com/login/google/callback',
 ],
 
 ];

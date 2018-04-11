@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-
+use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Socialite;
+use Auth;
 
 class LoginController extends Controller
 {
@@ -40,5 +41,34 @@ class LoginController extends Controller
     }
 
 
+    public function redirectToProvider()
+    {
+        return Socialite::driver('google')->redirect();
+    }
+
+
+    public function handleProviderCallback()
+    {
+        $user = Socialite::driver('google')->user();
+
+        $authUser = $this->findOrCreateUser($user, 'google');
+        Auth::login($authUser, true);
+        return redirect($this->redirectTo);
+    }
+
+
+    public function findOrCreateUser($user)
+    {
+        $authUser = User::where('provider_id', $user->id)->first();
+        if ($authUser) {
+            return $authUser;
+        }
+        return User::create([
+            'name'     => $user->name,
+            'email'    => $user->email,
+            'provider' => 'google',
+            'provider_id' => $user->id
+        ]);
+    }
 }
 
