@@ -12,7 +12,7 @@
         <!-- Styles -->
         <style>
             html, body {
-				background-image:url("dang.jpg");
+				
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
