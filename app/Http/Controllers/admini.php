@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Lesartivle;
+use App\Commentaire;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests;
-
+use phpDocumentor\Reflection\Types\Array_;
 class admini extends Controller
 {
     //
@@ -37,19 +38,25 @@ class admini extends Controller
         return view('koko.view',$ar);
     }
 
-
-
-
-     public  function  mehdi(Request $request ,$id){
-        if ($request->isMethod('post')){
-            $ar= new Comment();
+ public function read(Request $request ,$id)
+    {
+    		  if ($request->isMethod('post')){
+            $ar= new Commentaire();
             $ar->comment=$request->input('body');
-            $ar->article_id= $id;
+            $ar->lesartivle_id= $id;
             $ar->save();
             // return redirect("view");
         }
-        $article=Article::find($id);
-        $ar=Array('article'=>$article);
-        return view("manage.read",$ar );
-    } 
+
+    	  $articles=Lesartivle::find($id);
+        $ar=Array('Lesartivles'=>$articles);
+        return view("koko.read",$ar);
+    }
+
+public function aaX()
+    {
+    		 return view("koko.edit");
+    }
+
+   	
 }

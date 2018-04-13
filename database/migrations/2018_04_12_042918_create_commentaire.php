@@ -17,8 +17,8 @@ class CreateCommentaire extends Migration
             $table->increments('id');
             $table->text('comment');
             $table->timestamps();
-            $table->integer('lesarticle_id')->unsigned();
-            $table->foreign('lesarticle_id')->references('id')->on('lesartivles');
+            $table->integer('lesartivle_id')->unsigned();
+            $table->foreign('lesartivle_id')->references('id')->on('lesartivles');
 
         });
     }

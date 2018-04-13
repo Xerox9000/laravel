@@ -4,24 +4,26 @@
 @section('content')
     <div class="container">
 
-
+ {{$Lesartivles-> created_at}}
         <div class="form-group">
             <label for="usr">Title:</label>
-            {{$article->title}}
+            {{$Lesartivles->titre}}
         </div>
         <div class="form-group">
             <label for="usr">body:</label>
-            {{$article->body}}
+            {{$Lesartivles->body}}
         </div>
+         <div class="form-group">
 
-        <div class="form-group">
+
+  <div class="form-group">
 
             <table class="table table-striped">
                 <tr>
                     <td> comments</td>
                 </tr>
 
-                @foreach($article->comments as $c)
+                @foreach($Lesartivles->commentaires as $c)
                     <tr>
                         <td>  {{$c->comment}}
                         </td>
@@ -29,11 +31,10 @@
                 @endforeach
 
             </table>
-
-            <form action="/read/{{$article->id}}" method="POST">
+           <form action="/read/{{$Lesartivles->id}}" method="POST">
                 {{csrf_field()}}
                 <div class="form-group">
-                    <label for="usr">body:</label>
+                    <label for="usr">COMMENTAIRE:</label>
                     <textarea rows="4" cols="50"  name="body" class="form-control">
       </textarea>
                 </div>
@@ -41,6 +42,8 @@
                 </br>
                 <input type="submit" value="add comment" class="btn btn-primary"/>
             </form>
-        </div>
+      
+ </div>
+      
     </div>
 @endsection

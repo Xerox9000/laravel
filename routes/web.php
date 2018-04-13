@@ -23,3 +23,6 @@ Route::get('login/google/callback', 'Auth\LoginController@handleProviderCallback
 Route::get('add', 'admini@Addarticle');
 Route::post('add', 'admini@AddArticle');
 Route::get('view', 'admini@view');
+Route::get('/read/{id}', 'admini@read');
+Route::post('/read/{id}', 'admini@read');
+Route::get('aa', 'admini@aaX');
