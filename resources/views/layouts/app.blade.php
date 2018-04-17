@@ -19,17 +19,18 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+	<link href="{{ asset('css/login.css') }}" rel="stylesheet">
 </head>
 <body>
-    
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+    <div id="app" class="bg">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel load">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'LARAVEL') }}
+					<img src="{{ asset('img/login/StickMan.png') }}" height="42" weight="42"/>
+                    {{ config('app.name', 'Laravel') }}
                 </a>
                    <a href="{{ url('/view') }}">
-                    LETTRES
+                    LETTER
                 </a>
 
 
@@ -48,8 +49,8 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                            <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-                            <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
+                            <li><a class="nav-link" href="{{ route('login') }}"><img src="{{ asset('img/login/Login_Btn.png') }}" height="32" weight="32"/> {{ __('Login') }}</a></li>
+                            <li><a class="nav-link" href="{{ route('register') }}"><img src="{{ asset('img/login/Register_Btn.png') }}" height="30" weight="30"/>{{ __('Register') }}</a></li>
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

@@ -1,0 +1,12 @@
+body{
+	background-image:url("../img/login/background_login.jpg");
+}
+.load{
+	animation-name: loadanim;
+    animation-duration: 2s;
+}
+
+@keyframes loadanim {
+    from {margin: 100px;}
+    to {margin: 0px;}
+}

@@ -3,12 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <title>Locationz | HOME</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 		<link href="{{public_path()}}/resources/views/style.css" rel="stylesheet" type="text/css">
+		<link type="text/css" rel="stylesheet" href=""/>
         <!-- Styles -->
         <style>
             html, body {
@@ -63,6 +63,9 @@
         </style>
     </head>
     <body>
+		<header>
+			<p> t </p>
+		</header>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
