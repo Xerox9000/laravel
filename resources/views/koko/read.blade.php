@@ -16,7 +16,7 @@
          <div class="form-group">
 
 <div class="form-group">
-    <td> comments</td>
+
     @foreach($Lesartivles->commentaires as $c)
             <div class="comment-box">
     <span class="up-line"></span>
@@ -25,7 +25,7 @@
     <div class="header">
       <div class="user-info">
          
-        <h3 class="user-name"><a href="{{ "/read/".$c->user->id   }}">{{$c->user->name   }}</a></h3>
+        <h3 class="user-name"><a href="{{ "/profil/".$c->user->id   }}">{{$c->user->name   }}</a></h3>
       </div>
       
     </div>

@@ -10,9 +10,9 @@ use phpDocumentor\Reflection\Types\Array_;
 class admini extends Controller
 {
     //
-   public function __construct()
+   public function __construct()  
     {
-        $this->middleware('auth', ['except' => ['view','read']] );
+        $this->middleware('auth', ['except' => ['view','read','profil']] );
     }
     public function Addarticle(Request $request){
           if ($request->isMethod('post')){
