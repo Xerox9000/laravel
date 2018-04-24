@@ -7,7 +7,7 @@
  <a href="{{ "/read/".$Lesartivles->user->id   }}">by:{{$Lesartivles->user->name   }}</a>
         <div class="form-group">
             <label for="usr">Title:</label>
-            {{$Lesartivles->titre}}
+         <p  class="rrrqQ" >  {{$Lesartivles->titre}}</p>
         </div>
         <div class="form-group">
             <label for="usr">body:</label>
