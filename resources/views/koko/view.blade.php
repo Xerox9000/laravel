@@ -1,4 +1,5 @@
 
+
 @extends('layouts.app')
 
 
@@ -25,10 +26,11 @@
       <!-- Post Content-->
       <div class="post-content">
         
-        <h1 class="title">{{$art->titre}}</h1>
+        <h1 class="title">  <a href="{{ "/read/".$art->id}}">{{$art->titre}}</a> </h1>
       
         <p class="description"> {!! str_limit( $art->body, 180) !!}</p>
-        <div class="post-meta"><span class="timestamp"><i class="fa fa-clock-o"></i> {{$art->timestamps}} day ago</span><span class="comments"><i class="fa fa-comments"></i><a href="#"> </a></span></div>
+        <div class="post-meta"><span class="timestamp"><i class="fa fa-clock-o"></i> {{$art->timestamps}} day ago</span><span class="comments"><i class="fa fa-comments"></i><a href="{{ "/read/".$art->user->id   }}">by:{{$art->user->name   }}</a></span></div>
+
       </div>
     </div>
   </div>

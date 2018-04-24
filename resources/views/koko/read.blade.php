@@ -34,6 +34,8 @@
 
 
             </table>
+             @auth
+
            <form action="/read/{{$Lesartivles->id}}" method="POST">
                 {{csrf_field()}}
                 <div class="form-group">
@@ -45,7 +47,12 @@
                 </br>
                 <input type="submit" value="add comment" class="btn btn-primary"/>
             </form>
-      
+             @else
+
+             <p align="center" style="margin-top: 1em"> <font size="6" face="sans-serif"> Please   <a href=" /login "> login</a>  if u wanna write a comment </font> </p>
+
+       @endauth
+
  </div>
       
     </div>
