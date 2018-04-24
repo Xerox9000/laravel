@@ -3,15 +3,15 @@
 
 @section('content')
     <div class="container">
-
- {{$Lesartivles-> created_at}}
+{{$Lesartivles-> created_at}}
+ <a href="{{ "/read/".$Lesartivles->user->id   }}">by:{{$Lesartivles->user->name   }}</a>
         <div class="form-group">
             <label for="usr">Title:</label>
             {{$Lesartivles->titre}}
         </div>
         <div class="form-group">
             <label for="usr">body:</label>
-            {{$Lesartivles->body}}
+            {!!$Lesartivles->body!!}
         </div>
          <div class="form-group">
 
@@ -22,13 +22,16 @@
                 <tr>
                     <td> comments</td>
                 </tr>
-
-                @foreach($Lesartivles->commentaires as $c)
+ 
+                 @foreach($Lesartivles->commentaires as $c)
                     <tr>
-                        <td>  {{$c->comment}}
+                        <td> <a href="{{ "/read/".$c->user->id   }}">{{$c->user->name   }}</a>  {{$c->comment}}  
                         </td>
+                        
                     </tr>
                 @endforeach
+
+
 
             </table>
            <form action="/read/{{$Lesartivles->id}}" method="POST">

@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-@section('content')
+
+
+@section('js')
     <div class="container">
         <form action="add" method="POST">
             {{csrf_field()}}
@@ -11,9 +13,10 @@
             </div>
             <div class="form-group">
                 <label for="usr">body:</label>
-                <textarea rows="4" cols="50"  name="body" class="form-control">
+                <textarea id="summary-ckeditor" rows="4" cols="50"  name="body" class="form-control">
       </textarea>
             </div>
+
 
             </br>
             <input type="submit" value="add new" class="btn btn-primary"/>
@@ -21,4 +24,19 @@
 
     </div>
 
+    <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
+
+<script>
+
+    CKEDITOR.replace( 'summary-ckeditor' );
+
+</script>
+
 @endsection
+
+
+
+
+
+
+

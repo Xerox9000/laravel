@@ -20,3 +20,10 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 const app = new Vue({
     el: '#app'
 });
+ <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
+
+<script>
+
+    CKEDITOR.replace( 'summary-ckeditor' );
+
+</script>
