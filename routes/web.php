@@ -25,3 +25,4 @@ Route::post('add', 'admini@AddArticle');
 Route::get('view', 'admini@view');
 Route::get('/read/{id}', 'admini@read');
 Route::post('/read/{id}', 'admini@read');
+Route::get('aa', 'admini@aaX');

@@ -4033,6 +4033,7 @@
   bottom: 0;
   background: #FFFFFF;
   width: 100%;
+  height: 350px;
   padding: 30px;
   -webkti-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -4134,6 +4135,10 @@
 }
 .container .info span .fa {
   color: #e74c3c;
+}
+
+.column{
+	margin-top: 40px;
 }
 
 
