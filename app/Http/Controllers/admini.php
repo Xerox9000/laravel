@@ -14,7 +14,7 @@ class admini extends Controller
 
    public function __construct()
     {
-        $this->middleware('auth');
+      $this->middleware('auth', ['except' => ['view']]);
     }
 
     public function Addarticle(Request $request){
@@ -54,9 +54,10 @@ class admini extends Controller
     }
 
 public function aaX()
-    {
-    		 return view("koko.edit");
-    }
+		    {
+		    		
+
+		    }
 
    	
 }
