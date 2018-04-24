@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Lesartivle;
 use App\Commentaire;
+use App\User;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests;
 use phpDocumentor\Reflection\Types\Array_;
@@ -30,6 +31,7 @@ class admini extends Controller
         $ar=Array('Lesartivles'=>$articles);
         return view('koko.view',$ar);
     }
+
  public function read(Request $request ,$id)
     {
               if ($request->isMethod('post')){
@@ -44,6 +46,20 @@ class admini extends Controller
         $ar=Array('Lesartivles'=>$articles);
         return view("koko.read",$ar);
     }
+
+public function profil($id)
+    {
+
+          $profi=User::find($id);
+        $ar=Array('users'=>$profi);
+
+
+
+        return view("koko.profil",$ar);
+
+    }
+
+
 public function aaX()
     {
              return view("koko.edit");

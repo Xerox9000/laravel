@@ -4142,3 +4142,163 @@
 }
 
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.comment-box {
+  width: 98%;
+  height: auto;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  background-color: #fff;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+  position: relative;
+  margin-top: 25px;
+}
+
+.comment-box .circle {
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 3px solid #e54748;
+  border-radius: 50%;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.comment-box .circle:after {
+  content: "";
+  position: absolute;
+  background: #e54748;
+  width: 7px;
+  height: 3px;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.comment-box .up-line {
+  position: absolute;
+  width: 3px;
+  height: 51.5%;
+  background: #e54748;
+  left: -16.7px;
+  top: -15px;
+}
+
+.comment-box:first-of-type .up-line {
+  display: none;
+}
+
+.comment-box:last-child .down-line {
+  display: none;
+}
+
+.comment-box .down-line {
+  position: absolute;
+  width: 3px;
+  height: 50%;
+  background: #e54748;
+  left: -16.7px;
+  bottom: -10px;
+}
+
+.comment-box .header {
+  height: 55px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-box .content {
+  font-family: "Roboto";
+  font-weight: 400;
+  padding: 30px 30px;
+  text-align: justify;
+  color: #595959;
+}
+
+.comment-box .header .heart {
+  color: #ccc;
+  display: block;
+  cursor: pointer;
+  margin-right: 10px;
+  -webkit-transition: all .4s ease-in-out;
+          transition: all .4s ease-in-out;
+}
+
+.comment-box .header input[type="checkbox"] {
+  display: none;
+}
+
+.comment-box .header input[type="checkbox"]:checked + label .heart {
+  webkit-animation: popupHeart .3s ease-in-out;
+         animation: popupHeart .3s ease-in-out;
+  color: #c0392b;
+}
+
+.comment-box .header .user-info {
+  display: flex;
+  align-items: center;
+}
+
+.comment-box .header .profile-photo {
+  width: 40px;
+  height: 40px;
+  margin-left: 7px;
+  border-top-left-radius: 5px;
+}
+
+.comment-box .header .user-name {
+  font-family: "Roboto";
+  font-weight: 500;
+  color: #515151;
+  font-size: 0.95em;
+  margin-left: 10px;
+}
+
+@-webkit-keyframes popupHeart {
+  0% {
+    color: #ccc;
+    opacity: 0;
+    transform: scale(2.5);
+  }
+  
+  10% {
+    opacity: 0.3;
+  }
+  
+  100% {
+    color: #c0392b;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes popupHeart {
+  0% {
+    color: #ccc;
+    opacity: 0;
+    transform: scale(2.5);
+  }
+  
+  10% {
+    opacity: 0.3;
+  }
+  
+  100% {
+    color: #c0392b;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
