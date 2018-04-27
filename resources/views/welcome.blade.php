@@ -11,7 +11,7 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="index.html" class="logo">HelpShop</a>
+					<a href="" class="logo">HelpShop</a>
 					<nav id="nav">
 					@if (Route::has('login'))
 					@auth
