@@ -3,12 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Locationz | HOME</title>
+        <title>Help Shop | HOME</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-		<link href="{{public_path()}}/resources/views/style.css" rel="stylesheet" type="text/css">
-		<link type="text/css" rel="stylesheet" href=""/>
+		<link href="css/welcome.css" rel="stylesheet" type="text/css">
         <!-- Styles -->
         <style>
             html, body {
@@ -64,25 +63,25 @@
     </head>
     <body>
 		<header>
-			<p> t </p>
+			<h2 id="Title">Help Shop 
+			@if (Route::has('login'))
+				@auth
+                <a href="{{ url('/home') }}">Home</a>
+				@else
+				<a class="User_Btn" href="{{ route('login') }}">Login</a>
+				<a class="User_Btn" href="{{ route('register') }}">Register</a>
+				@endauth
+			@endif
+			</h2>
 		</header>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
+            <div class="middle">
+                <div class="content">
+                    <div class="Col-1">
+						<p>Problem Solving.</br><strong>Redefiened.</strong></p>
+					</div>
+					<div class="Col-2">
+					</div>
                 </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    HELLO<br/>WORLD
-                </div>
-
                 <div class="links">
                     <a href="link2.php">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>

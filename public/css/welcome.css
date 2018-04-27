@@ -1,0 +1,24 @@
+#Title{
+	background: linear-gradient(to bottom, #0D1D31 , #1F4777);
+	color:#FFF;
+	margin:auto;
+	padding:16px;
+}
+
+.User_Btn{
+	color:white;
+	float:right;
+	margin-left:12px;
+	margin-top:4px;
+	font-size:20px;
+	text-decoration:none;
+}
+
+.User_Btn:hover{
+	background:white;
+	color:black;
+}
+
+.Col-1{
+	font-size:60px;
+}
