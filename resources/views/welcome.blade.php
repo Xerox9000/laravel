@@ -66,7 +66,7 @@
 			<h2 id="Title">Help Shop 
 			@if (Route::has('login'))
 				@auth
-                <a href="{{ url('/home') }}">Home</a>
+                <a class="User_Btn" href="{{ url('/home') }}">Home</a>
 				@else
 				<a class="User_Btn" href="{{ route('login') }}">Login</a>
 				<a class="User_Btn" href="{{ route('register') }}">Register</a>
