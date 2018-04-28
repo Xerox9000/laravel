@@ -19,6 +19,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+<<<<<<< HEAD
 	<link href="{{ asset('css/login.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/main.css') }}" rel="stylesheet">
 </head>
@@ -49,26 +50,61 @@
 			</header>
 			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 			
+=======
+    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div id="app" class="bg">
+                <header id="header">
+                <div class="inner">
+                    <a href="" class="logo">HelpShop</a>
+                    <a href="{{ url('/view') }}">LETTER</a>
+                    <nav id="nav">
+                    @if (Route::has('login'))
+                    @auth
+                        <a class="User_Btn" href="{{ url('/home') }}">Home</a>
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                        </a>
+                    @else
+                        <a class="User_Btn" href="{{ route('login') }}">Login</a>
+                        <a class="User_Btn" href="{{ route('register') }}">Register</a>
+                    @endauth
+                    @endif
+                    </nav>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                       @csrf
+                    </form>
+                </div>
+            </header>
+            <a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+            
+>>>>>>> 67b9891d4131708d4152eb94722c7d9904d2e42f
         <!--<nav class="navbar navbar-expand-md navbar-light navbar-laravel load">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-					<img src="{{ asset('img/login/StickMan.png') }}" height="42" weight="42"/>
+                    <img src="{{ asset('img/login/StickMan.png') }}" height="42" weight="42"/>
                     {{ config('app.name', 'Laravel') }}
                 </a>
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 67b9891d4131708d4152eb94722c7d9904d2e42f
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     Left Side Of Navbar
                     <ul class="navbar-nav mr-auto">
-
                     </ul>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 67b9891d4131708d4152eb94722c7d9904d2e42f
                     Right Side Of Navbar
                     <ul class="navbar-nav ml-auto">
                         Authentication Links
@@ -80,8 +116,6 @@
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
-
-
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ url('/add') }}">
                                         add article
@@ -107,6 +141,10 @@
             @yield('content')
         </main>
     </div>
+<<<<<<< HEAD
 	@yield('js')
+=======
+    @yield('js')
+>>>>>>> 67b9891d4131708d4152eb94722c7d9904d2e42f
 </body>
 </html>

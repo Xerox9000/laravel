@@ -1,8 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use App\Lesartivle;
+use App\Commentaire;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Requests;
+use phpDocumentor\Reflection\Types\Array_;
+
+
 
 class HomeController extends Controller
 {
@@ -23,6 +29,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $articles= Lesartivle::all();
+        $ar=Array('Lesartivles'=>$articles);
+        return view('koko.view',$ar);
     }
 }

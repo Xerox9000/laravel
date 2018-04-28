@@ -3,15 +3,15 @@
 
 @section('content')
     <div class="container">
-
- {{$Lesartivles-> created_at}}
+{{$Lesartivles-> created_at}}
+ <a href="{{ "/read/".$Lesartivles->user->id   }}">by:{{$Lesartivles->user->name   }}</a>
         <div class="form-group">
             <label for="usr">Title:</label>
             {{$Lesartivles->titre}}
         </div>
         <div class="form-group">
             <label for="usr">body:</label>
-            {{$Lesartivles->body}}
+            {!!$Lesartivles->body!!}
         </div>
          <div class="form-group">
 
@@ -22,15 +22,20 @@
                 <tr>
                     <td> comments</td>
                 </tr>
-
-                @foreach($Lesartivles->commentaires as $c)
+ 
+                 @foreach($Lesartivles->commentaires as $c)
                     <tr>
-                        <td>  {{$c->comment}}
+                        <td> <a href="{{ "/read/".$c->user->id   }}">{{$c->user->name   }}</a>  {{$c->comment}}  
                         </td>
+                        
                     </tr>
                 @endforeach
 
+
+
             </table>
+             @auth
+
            <form action="/read/{{$Lesartivles->id}}" method="POST">
                 {{csrf_field()}}
                 <div class="form-group">
@@ -42,7 +47,12 @@
                 </br>
                 <input type="submit" value="add comment" class="btn btn-primary"/>
             </form>
-      
+             @else
+
+             <p align="center" style="margin-top: 1em"> <font size="6" face="sans-serif"> Please   <a href=" /login "> login</a>  if u wanna write a comment </font> </p>
+
+       @endauth
+
  </div>
       
     </div>
