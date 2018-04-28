@@ -476,7 +476,7 @@
 	@media screen and (max-width: 1680px) {
 
 		.row > * {
-			padding: 0 0 0 2em;
+			padding: 10px 0 0 2em;
 		}
 
 		.row {
@@ -4300,6 +4300,11 @@
     opacity: 1;
     transform: scale(1);
   }
+}
+
+.add{
+	background-color:#ED2D34;
+	border-radius:8px;
 }
 
 

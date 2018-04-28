@@ -33,7 +33,7 @@
 					@if (Route::has('login'))
 					@auth
 						<a class="User_Btn" href="{{ url('/home') }}">Home</a>
-						<a href="{{ url('/add') }}">Add Article</a>
+						<a class="add" href="{{ url('/add') }}">Add Article</a>
 						<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
 						</a>
