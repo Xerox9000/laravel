@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<link href="css/google.css" rel="stylesheet">
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -44,12 +44,23 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
-
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     {{ __('Forgot Your Password?') }}
                                 </a>
                             </div>
                         </div>
+																					<div class='g-sign-in-button'>
+								<div class=content-wrapper>
+								<a href="login/google">
+									<div class='logo-wrapper'>  
+										<img src='https://developers.google.com/identity/images/g-logo.png'>
+									</div>  
+									<span class='text-container'> 
+										<span class="span-text">Sign in with Google</span>
+									</span>
+								</div>  
+								</div>
+								</a>
                     </form>
                 </div>
             </div>
