@@ -695,7 +695,7 @@
 		}
 
 		.row {
-			margin: 0 0 -1px -1.5em;
+			margin: 10px 0 -1px -1.5em;
 		}
 
 		.row.uniform > * {
@@ -2087,7 +2087,7 @@
 		appearance: none;
 		border-radius: 0;
 		border: none;
-		border: solid 3px;
+		border: solid 1px;
 		color: inherit;
 		display: block;
 		outline: 0;
@@ -2241,7 +2241,7 @@
 	select,
 	textarea {
 		background: none;
-		border-color: #fceced;
+		margin-top:4px;
 	}
 
 		input[type="text"]:focus,
@@ -2249,8 +2249,6 @@
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #e5474b;
-			box-shadow: 0 0 0 1px #e5474b;
 		}
 
 	.select-wrapper:before {
@@ -3128,7 +3126,7 @@
 			}
 
 		#header .logo {
-			font-family: 'Pacifico', cursive;
+			font-family:Magettas;
 			display: inline-block;
 			height: inherit;
 			left: 0;
@@ -4029,6 +4027,7 @@
 }
 .post-module .post-content {
 
+  overflow:auto;
   position: absolute;
   bottom: 0;
   background: #FFFFFF;
@@ -4140,5 +4139,8 @@
 .column{
 	margin-top: 40px;
 }
-
+@font-face {
+    font-family: Magettas;
+    src: url(../fonts/Magettas.otf);
+}
 
